@@ -1,0 +1,122 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Online_Job_Portal_System.SiteMaster" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+  <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+   
+  
+ 
+  
+   
+</head>
+<body>
+    <form id="Form1" runat="server">
+ 
+       
+              <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 58px; border-top: 2px solid black;
+              border-left: 3px solid black;border-right: 3px solid black;">
+            <tr >
+                <td  align="left" valign="top" class="style2">
+                    <asp:image ID="Image1" runat="server" ImageUrl="~/Images/Adigrat_university.png"  
+                        Height="82px" Width="185px" /></td>
+            
+            
+                <td class="style1" >
+                    <strong><span style="font-size: 18pt; color: #663366">
+                    <span style="color: #006666; font-family: Algerian;">ONLINE JOB PORTAL SYSTEM
+                    FOR 
+                    <br />
+                    ADIGRAT UNIVERSITY<br />
+                    ዓዲግራት ዩኒቨርሲቲ
+                    </span>
+                       </span></strong></td>
+                      <td align="center">
+            <asp:LinkButton ID="lnkAccountUpdate" runat="server" Font-Bold="True" Font-Size="Medium"
+                ForeColor="black" onclick="lnkAccountUpdate_Click" >Register</asp:LinkButton>
+       <asp:LinkButton ID="ds" runat="server" Font-Bold="True" Font-Size="Medium"  ValidationGroup="g3"
+                ForeColor="black" onclick="ds_Click" >Login</asp:LinkButton></td>
+      
+            </tr>
+
+        </table>
+                <table  cellpadding="0" cellspacing="0"style="border-top: 2px solid black; border-bottom: 0px solid black; 
+                    width: 100%; height: 27px; border-left-style: none; border-left-color: inherit;
+                     border-left-width: 1px; border-right-style: none; border-right-color: inherit; border-right-width: 1px;">
+    <tr>
+        <td align="left"  bgcolor="#0099FF" style="font-weight: bold;  text-align: left"  >
+            <asp:Menu ID="Menu1" runat="server" ForeColor="Black" Orientation="Horizontal" font-size="14pt" CssClass="menu"  
+               height="26px"   style="margin-left: 160px;">
+              
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/Home.aspx" Text="Home  &nbsp;  &nbsp;&nbsp;" />
+                     
+                   
+                    <asp:MenuItem NavigateUrl="~/About.aspx" Text="About  &nbsp; &nbsp; &nbsp;"  />
+                     
+                    <asp:MenuItem NavigateUrl="~/ContactUs.aspx" Text="ContactUs  &nbsp; &nbsp; &nbsp;"  />
+                     
+                   
+                    <asp:MenuItem NavigateUrl="~/FeedBack.aspx" Text="FeedBack  &nbsp; &nbsp; &nbsp;"  />
+                    
+                    <%-- <asp:MenuItem NavigateUrl="~/LoginType.aspx" Text="Sign Up  &nbsp; &nbsp; &nbsp;"  />--%>
+                   
+                     <asp:MenuItem NavigateUrl="~/Login.aspx" Text="Login  &nbsp; &nbsp; &nbsp;"  />
+                      <asp:MenuItem NavigateUrl="~/WebForm2.aspx" Text="News  &nbsp; &nbsp; &nbsp;"  />
+                     <asp:MenuItem Text="Search Job &nbsp;" Value="Search">
+                        <asp:MenuItem NavigateUrl="~/JobSeeker/Search/ByLocation.aspx" Text="By Job Location" Value="JobSeeker">
+                        </asp:MenuItem>
+                       <%-- <asp:MenuItem NavigateUrl="~/Job Seeker/Search jobs/Job Seekers Registration.aspx" Text="Search By" Value="Employer"></asp:MenuItem>
+
+                 --%> <asp:MenuItem NavigateUrl="~/JobSeeker/Search/ByJobName.aspx" Text=" By Name" Value="Employer"></asp:MenuItem>
+                  <asp:MenuItem NavigateUrl="~/JobSeeker/Search/ByJobCatagory.aspx" Text=" By Catagory" Value="Employer"></asp:MenuItem>
+                  <asp:MenuItem NavigateUrl="~/JobSeeker/Search/ViewAllJobs.aspx" Text="ViewAll Jobs" Value="Employer"></asp:MenuItem>
+                
+                 
+                  </asp:MenuItem>
+
+                    
+                    
+                </Items>
+                
+                 <DynamicHoverStyle BackColor="white" />
+                        <StaticHoverStyle BackColor="white" Height="30px" />
+                        <StaticMenuItemStyle BackColor="#0099FF" ForeColor="Black" 
+                    BorderStyle="None"  />
+                
+
+
+                   
+
+
+                     
+            </asp:Menu>
+        </td>
+    </tr>
+</table>
+         
+    
+         <%-- style=" border-top: 3px solid black;
+              border-left: 3px solid black;border-right: 3px solid black; height: 38px;"--%>
+            <div class="main" >
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+            <br />
+        </div>
+        
+  
+    <div class="footer" style="text-align: center">
+     <table  cellpadding="0" cellspacing="0" style="border-top: 1px solid black; border-bottom: 1px solid black; width: 100%; height: 25px;
+      border-left-style: none; border-left-color: inherit; border-right-style: none; border-right-color: inherit;  margin-left: 0px; margin-top: 12px;">
+    
+        <tr align="left">
+            <td align="center"     bgcolor="#0099FF" style="font-weight: bold; color: black">&copy
+               2017 All Rights Reserved </td>
+        </tr>
+    </table>
+</div>
+   
+    </form>
+</body>
+</html>

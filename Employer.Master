@@ -1,0 +1,134 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Employer.Master.cs" Inherits="Online_Job_Portal_System.Employer.Site2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+     <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+  
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form1" runat="server">
+  
+              <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 95px;">
+            <tr >
+                <td  align="left" valign="top">
+                    <asp:image ID="Image1" runat="server" ImageUrl="~/Images/Adigrat_university.png" 
+                        Height="94px" Width="142px" /></td>
+            
+            
+                <td   align="left" >
+                    <strong><span style="font-size: 20pt; color: #663366">
+                    <span style="color: #006666; font-family: Algerian;">ONLINE JOB PORTAL SYSTEM <br />
+                    FOR ADIGRAT UNIVERSITY
+                    </span>
+                       </span></strong></td>
+                       <td align="center">
+            <asp:LinkButton ID="Logout" runat="server" Font-Bold="True" Font-Size="Medium"
+                ForeColor="black" onclick="Logout_Click"   >Logout</asp:LinkButton>
+    </td>
+                   
+            </tr>
+
+        </table>
+     <%--    <table bgcolor="#0099FF" border="0" cellpadding="0" cellspacing="0" style="font-weight: bold;
+     color: red; height: 29px;" width="100%">
+    <tr>
+      <td align="center"  style="Width:55px"> </td> 
+       <td style="Width:65px"  align="left" >
+   <asp:HyperLink ID="HyperLink3" Text="Home" runat="server" NavigateUrl="~/Home.aspx" 
+            ForeColor="Black" ></asp:HyperLink>
+         
+               <asp:LinkButton ID="Button1" runat="server" ForeColor="Red" onclick="Button1_Click" 
+                   >(0) </asp:LinkButton>
+      </td>
+        
+      <td  style="Width:65px"  align="left"  >
+   <asp:HyperLink ID="HyperLink4" Text="Search Jobs" runat="server" 
+              NavigateUrl="~/Search.aspx" ForeColor="Black"></asp:HyperLink>
+      </td>
+       <td  style="Width:65px" align="left"  >
+   <asp:HyperLink ID="HyperLink1" Text="Update" runat="server" NavigateUrl="~/Employer1/EmployerLogin.aspx" ForeColor="black"></asp:HyperLink>
+      </td>  <td  style="Width:65px" align="left" >
+   <asp:HyperLink ID="HyperLink2" Text="Feedback" runat="server" 
+                NavigateUrl="~/Feedback.aspx" ForeColor="Black"></asp:HyperLink>
+      </td> <td  style="Width:115px" align="left" >
+   <asp:HyperLink ID="H1" Text="Logout" runat="server" NavigateUrl="~/Default.aspx" ForeColor="black" ></asp:HyperLink>
+      </td>
+    </tr>
+</table>--%>
+<table  cellpadding="0" cellspacing="0"
+style="border-top: 1px solid black; 
+                    width: 100.6%; height: 35px; border-left-style: none; border-left-color: inherit;
+                     border-left-width: 1px; border-right-style: none; border-right-color: inherit; border-right-width: 1px;">
+    <tr>
+        <td align="left"  bgcolor="#0099FF" style="font-weight: bold; "  >
+            <asp:Menu ID="Menu1" runat="server" ForeColor="Black" Orientation="Horizontal" font-size="14pt"
+               CssClass="menu"  
+               height="26px" Width="936px"  style="margin-left: 200px;" 
+                EnableViewState="True">
+                   <Items>
+                    <asp:MenuItem NavigateUrl="~/Home.aspx" Text="Home  &nbsp;  &nbsp;&nbsp;" />
+                     
+                   <asp:MenuItem Text="View Applicants &nbsp;  &nbsp;" Value="Update">
+                    <asp:MenuItem NavigateUrl="~/Employer/SearchJobSeeker/ViewApplicants.aspx" Text="View Applicants By JobName  &nbsp;  &nbsp;&nbsp;"  >
+                    </asp:MenuItem>
+                     
+                    <asp:MenuItem NavigateUrl="~/Employer/SearchJobSeeker/ViewAllJobSeekers.aspx" Text="ViewAllJobSeekers  &nbsp;  &nbsp;&nbsp;" >
+                     </asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="View Job Request &nbsp; &nbsp; " Value="Update" >
+                     <asp:MenuItem NavigateUrl="~/Employer/JobRequest/ViewAllJobRequest.aspx" Text="View All Job Request"  >
+                      </asp:MenuItem>
+                     <asp:MenuItem NavigateUrl="~/Employer/JobRequest/ViewJobRequest.aspx" Text="View Job Request By Departement " >
+                     </asp:MenuItem>
+                      </asp:MenuItem>
+                    <asp:MenuItem Text="Update  &nbsp;  &nbsp;&nbsp;" Value="Update">
+                        <asp:MenuItem NavigateUrl="~/Employer/Update/Update Employer Account.aspx" Text="Change Password" Value="Change Password">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Employer/Update/Update Employer Register Detail.aspx" Text="Employer Profile" Value="Employer"></asp:MenuItem>
+                 <%-- <asp:MenuItem NavigateUrl="~/Staff Manager/Register/Register Staff Manager.aspx" Text="Employer" Value="Employer"></asp:MenuItem>--%>
+                     </asp:MenuItem>
+              <asp:MenuItem NavigateUrl="~/Employer/Screnning/ScrenningByCGPA.aspx" Text="Screnning  &nbsp;  &nbsp;&nbsp;" />
+           <asp:MenuItem NavigateUrl="~/Employer/Exam Result.aspx" Text="Post Exam Result  &nbsp;  &nbsp;&nbsp;" />
+           
+                </Items>
+                 <DynamicHoverStyle BackColor="white"  />
+                        <StaticHoverStyle BackColor="white" Height="30px"  />
+
+                        <StaticMenuItemStyle BackColor="#0099FF" ForeColor="Black"  BorderStyle="None"
+                     />
+              
+            </asp:Menu>
+        </td>
+    </tr>
+</table>
+           
+       <%-- <div class="main" style="height:420px">--%>
+         <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+            <br />
+        </div>
+  
+    <div class="footer" style="text-align: center">
+       <%-- <div style="margin-left: 11px" >--%>
+     <table  cellpadding="0" cellspacing="0" 
+
+                
+                style="border-top: 1px solid black; border-bottom: 1px solid black; width: 100.6%; height: 35px; border-left-style: none; border-left-color: inherit; border-right-style: none; border-right-color: inherit;  margin-left: 0px;">
+    
+        <tr align="left">
+            <td align="center"     bgcolor="#0099FF" style="font-weight: bold; color: black">&copy
+               2017 All Rights Reserved </td>
+        </tr>
+    </table>
+</div>
+   
+    </form>
+</body>
+</html>
